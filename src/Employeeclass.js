@@ -29,8 +29,8 @@ class Employee {
     }
 };
 class Manager extends Employee{
-    constructor (arg1 , Id , email, role, officeNum) {
-        super(arg1 , Id , email, role) 
+    constructor (arg1 , Id , email, officeNum) {
+        super(arg1 , Id , email,) 
         this.officeNum = officeNum
     }
 
@@ -43,25 +43,43 @@ class Manager extends Employee{
     
 
 };
+class Engineer extends Employee{
+    constructor (arg1, Id,  email, role, gitName) {
+    super(arg1, Id, email, role)
+    this.gitName = gitName
 
-var employee1 = new Manager('John' , '12345' , 'test@test.com' , 'text', '522')
+}
+    getRole(){
+        return 'engineer'
+    }
+    getGitName(){
+        return this.gitName
+    }
+};
+class Intern extends Employee{
+    constructor (arg1, Id, email, role, school){
+    super(arg1, Id, email, role)
+    this.school = school
+}
+    getRole(){
+        return 'intern'
+    }
+    getSchool(){
+        return this.school
+    }
+};
 
-console.log(employee1.getName())
-console.log(employee1.getId())
-console.log(employee1.getEmail())
-console.log(employee1.getRole())
-console.log(employee1.getOfficNum())
 
-// name
+// var employee1 = new Intern('John' , '12345' , 'test@test.com' , 'text', 'LSU' )
 
-// id
+// console.log(employee1.getName())
+// console.log(employee1.getId())
+// console.log(employee1.getEmail())
+// console.log(employee1.getRole())
+// // console.log(employee1.getOfficNum())
+// // console.log(employee1.getGitName())
+// console.log(employee1.getSchool())
 
-// email
+module.exports = {Employee: Employee, Manager:Manager , Engineer:Engineer , Intern:Intern}
 
-// getName()
 
-// getId()
-
-// getEmail()
-
-// getRole() // Returns 'Employee'
