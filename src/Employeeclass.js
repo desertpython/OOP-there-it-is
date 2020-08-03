@@ -80,6 +80,9 @@ class Intern extends Employee{
 // // console.log(employee1.getGitName())
 // console.log(employee1.getSchool())
 
-module.exports = {Employee: Employee, Manager:Manager , Engineer:Engineer , Intern:Intern}
+module.exports = Employee
+module.exports = Engineer
+module.exports = Intern
+module.exports = Manager
 
 
