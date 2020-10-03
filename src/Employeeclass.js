@@ -29,8 +29,9 @@ class Employee {
     }
 };
 class Manager extends Employee{
-    constructor (arg1 , Id , email, officeNum) {
-        super(arg1 , Id , email,) 
+    constructor (arg1, Id, email, role, officeNum) {
+
+        super(arg1, Id, email, role) 
         this.officeNum = officeNum
     }
 
@@ -80,9 +81,7 @@ class Intern extends Employee{
 // // console.log(employee1.getGitName())
 // console.log(employee1.getSchool())
 
-module.exports = Employee
-module.exports = Engineer
-module.exports = Intern
-module.exports = Manager
+module.exports = {Employee, Engineer, Intern, Manager}
+
 
 
